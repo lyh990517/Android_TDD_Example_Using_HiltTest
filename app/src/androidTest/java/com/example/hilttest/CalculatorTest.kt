@@ -15,7 +15,7 @@ class CalculatorTest {
     var hiltRule = HiltAndroidRule(this)
 
     @Inject
-    lateinit var fakeCalculator: FakeCalculator
+    lateinit var calculator: Calculator
 
     @Before
     fun setUp() {
@@ -27,7 +27,7 @@ class CalculatorTest {
         val a = 1
         val b = 2
 
-        val result = fakeCalculator.add(a, b)
+        val result = calculator.add(a, b)
 
         assertEquals(3, result)
     }
